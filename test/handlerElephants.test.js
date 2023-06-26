@@ -32,4 +32,9 @@ describe('Testes da função HandlerElephants', () => {
     const availabilityElephants = ['Friday', 'Saturday', 'Sunday', 'Tuesday'];
     expect(availabilityElephants).not.toContain('Monday');
   });
+
+  it('Para quando o argumento é diferente do esperado em count, names e averageAge deve retornar null', () => {
+    const nullElephants = handlerElephants('outroElemento');
+    expect(nullElephants).toBeNull();
+  });
 });
